@@ -16,9 +16,9 @@ repositories {
 }
 
 val vertxVersion = "4.2.1"
-val junitJupiterVersion = "5.7.0"
+val junitJupiterVersion = "5.8.2"
 
-val mainVerticleName = "top.leostudio.vertxstarter.MainVerticle"
+val mainVerticleName = "top.leostudio.vertxstarter.GraphQLVerticle"
 val launcherClassName = "io.vertx.core.Launcher"
 
 val watchForChange = "src/**/*"
@@ -30,11 +30,11 @@ application {
 
 dependencies {
   implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))
-  implementation("io.vertx:vertx-web-client")
-  implementation("io.vertx:vertx-web")
-  implementation("io.vertx:vertx-mysql-client")
+  implementation("io.vertx:vertx-web-client:4.2.1")
+  implementation("io.vertx:vertx-web:4.2.1")
+  implementation("io.vertx:vertx-mysql-client:4.2.1")
   implementation("io.vertx:vertx-web-graphql:${vertxVersion}")
-  testImplementation("io.vertx:vertx-junit5")
+  testImplementation("io.vertx:vertx-junit5:4.2.1")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
 
